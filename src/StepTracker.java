@@ -23,6 +23,7 @@ public class StepTracker {
             System.out.println("Номер дня не верен!");
             return;
         }
+        // Количество
         System.out.println("Введите колличество шагов.");
         int steps = scanner.nextInt();
         if (steps <= 0) {
@@ -38,6 +39,8 @@ public class StepTracker {
 
         if (steps <= 0) {
             System.out.println("Неверное число шагов.");
+            // return здесь необязателен,
+            // в любом случае уже произойдет выход из метода
             return;
         } else {
             goalSteps = steps;
@@ -58,6 +61,8 @@ public class StepTracker {
         System.out.println("Максимальное кол-во шагов за месяц: " + month.maxSteps());
         System.out.println("Среднее кол-во шагов за месяц: " + sumSteps / 30);
         System.out.println("Дистанция в км: "+converter.convertToKn(sumSteps));
+        // Сожженных
+        // Килокалории
         System.out.println("Кол-во сожженых калокалории за месяц: "+converter.convertStepsToKilocalories(sumSteps));
         System.out.println("Лучшая серия: " +month.beetSeries(goalSteps));
 
