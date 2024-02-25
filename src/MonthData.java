@@ -1,8 +1,6 @@
-// Scanner в классе не используется. Можно удалить импорт
-import java.util.Scanner;
-
 public class MonthData {
-    int[] days = new int[31];
+    int[] days = new int[30];
+
     int sumStepsFromMouth() {
         int sumSteps = 0;
         for (int i = 0; i < days.length; i++) {
@@ -20,6 +18,7 @@ public class MonthData {
         }
         return maxSteps;
     }
+
     int beetSeries(int goalByStepsPerDay) {
         int currentSeries = 0;
         int finalSeries = 0;
@@ -33,12 +32,11 @@ public class MonthData {
                 currentSeries = 0;
             }
         }
-        // В конце нужно еще раз проверить больше ли текущая серия финальной,
-        // потому что последняя серия не проверяется
-        // Можешь самостоятельно проверить этот баг, когда введешь наибольшую серию в конце месяца
-        return finalSeries;
+        if (currentSeries > finalSeries) {
+            return finalSeries;
+        }
+        return 0;
     }
-
     void printDayAndStepsFromMonth() {
         for (int i = 0; i < days.length; i++) {
             System.out.println((i + 1) + "-ый день = " + days[i]);

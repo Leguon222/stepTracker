@@ -6,17 +6,16 @@ public class Main {
         StepTracker stepTracker = new StepTracker(scanner);
         while (true) {
             printMenu();
-            // Неудачное название переменной
-            int currency = scanner.nextInt();
-            if (currency == 0) {
+            int command = scanner.nextInt();
+            if (command == 0) {
                 System.out.println("Пока!");
                 scanner.close();
                 return;
-            } else if (currency == 1) {
+            } else if (command == 1) {
                 stepTracker.addNewNumberStepsPerDay();
-            } else if (currency == 2) {
+            } else if (command == 2) {
                 stepTracker.changeStepGoal();
-            } else if (currency == 3) {
+            } else if (command == 3) {
                 stepTracker.printStatistic();
             } else {
                 System.out.println("Такой команды не существует!");
@@ -25,8 +24,7 @@ public class Main {
     }
     static void printMenu() {
         System.out.println("1 - Кол-во шагов за определенный день.");
-        // !!!! Цель
-        System.out.println("2 - Изменить цел по шагам в день.");
+        System.out.println("2 - Изменить цель по шагам в день.");
         System.out.println("3 - Напечатать статистику за определенный месяц.");
         System.out.println("0 - Выйти.");
     }

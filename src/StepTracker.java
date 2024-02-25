@@ -23,8 +23,7 @@ public class StepTracker {
             System.out.println("Номер дня не верен!");
             return;
         }
-        // !!!!! Количество
-        System.out.println("Введите колличество шагов.");
+        System.out.println("Введите количество шагов.");
         int steps = scanner.nextInt();
         if (steps <= 0) {
             System.out.println("Кол-во шагов не верно!");
