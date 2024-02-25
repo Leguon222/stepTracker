@@ -6,6 +6,7 @@ public class Main {
         StepTracker stepTracker = new StepTracker(scanner);
         while (true) {
             printMenu();
+            // Неудачное название переменной
             int currency = scanner.nextInt();
             if (currency == 0) {
                 System.out.println("Пока!");
@@ -24,7 +25,7 @@ public class Main {
     }
     static void printMenu() {
         System.out.println("1 - Кол-во шагов за определенный день.");
-        // Цель
+        // !!!! Цель
         System.out.println("2 - Изменить цел по шагам в день.");
         System.out.println("3 - Напечатать статистику за определенный месяц.");
         System.out.println("0 - Выйти.");
