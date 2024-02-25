@@ -1,11 +1,7 @@
 import java.util.Scanner;
 
 public class MonthData {
-    int[] days = new int[30];
-    // Не очень понятно зачем здесь это поле
-    // Ведь оно нигде в классе не используется
-    Scanner scanner;
-
+    int[] days = new int[31];
     int sumStepsFromMouth() {
         int sumSteps = 0;
         for (int i = 0; i < days.length; i++) {
@@ -23,9 +19,6 @@ public class MonthData {
         }
         return maxSteps;
     }
-    // Будет баг, если самая длинная серия находится в конце месяца
-    // Попробуй затестировать программу.
-    // Для это нужно ввести в последние дни количество шагов, превышающее цель
     int beetSeries(int goalByStepsPerDay) {
         int currentSeries = 0;
         int finalSeries = 0;

@@ -4,25 +4,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker(scanner);
-        // Не очень ясно зачем здесь эти переменные
-        // ведь они нигде не используются в этом классе
-        MonthData monthData = new MonthData();
-        Converter converter = new Converter();
         while (true) {
             printMenu();
-            // Однобуквенные переменные зло
-            // Стараемся избавляться от них
-            // Здесь подойдет название command, например
-            int i = scanner.nextInt();
-            if (i == 0) {
+            int currency = scanner.nextInt();
+            if (currency == 0) {
                 System.out.println("Пока!");
                 scanner.close();
                 return;
-            } else if (i == 1) {
+            } else if (currency == 1) {
                 stepTracker.addNewNumberStepsPerDay();
-            } else if (i == 2) {
+            } else if (currency == 2) {
                 stepTracker.changeStepGoal();
-            } else if (i == 3) {
+            } else if (currency == 3) {
                 stepTracker.printStatistic();
             } else {
                 System.out.println("Такой команды не существует!");
